@@ -1,17 +1,17 @@
 // src/data/schedule.js
 const schedule = [
     {
-        title: 'Reunión principal',
+        title: 'Escuela de formación: identidad, propósito y destino',
         day: 'Domingo',
-        time: '9:00 a. m.',
+        time: '8:30 a. m.',
     },
     {
-        title: 'Segunda reunión',
+        title: 'Celebración al Rey',
         day: 'Domingo',
-        time: '11:00 a. m.',
+        time: '10:00 a. m.',
     },
     {
-        title: 'Oración',
+        title: 'Noche de entrenamiento para empresarios y emprendedores',
         day: 'Miércoles',
         time: '7:00 p. m.',
     },

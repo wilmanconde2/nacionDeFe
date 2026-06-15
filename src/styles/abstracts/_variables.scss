@@ -1,23 +1,27 @@
-// src/styles/abstracts/_variables.scss
 :root {
-    --color-primary: #0f2742;
-    --color-primary-soft: #163759;
+    --color-primary: #c7a86b;
+    --color-primary-soft: #d7bb83;
     --color-accent: #c7a86b;
-    --color-bg: #f7f3ec;
-    --color-surface: #ffffff;
-    --color-surface-soft: #f4efe7;
-    --color-text: #4b5b6b;
-    --color-heading: #10233a;
-    --color-border: rgba(16, 35, 58, 0.1);
+
+    --color-bg: #f8f6f2;
+    --color-surface: rgba(255, 255, 255, 0.95);
+    --color-surface-soft: rgba(255, 255, 255, 0.85);
+
+    --color-text: #2d2d2d;
+    --color-heading: #111111;
+
+    --color-border: rgba(199, 168, 107, 0.25);
 
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 
     --container-width: 1200px;
+
     --radius-sm: 14px;
     --radius-md: 20px;
     --radius-lg: 28px;
 
-    --shadow-soft: 0 12px 40px rgba(16, 35, 58, 0.08);
+    --shadow-soft: 0 15px 45px rgba(0, 0, 0, 0.08);
+
     --transition-base: 220ms ease;
 }

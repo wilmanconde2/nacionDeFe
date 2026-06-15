@@ -14,9 +14,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Nación de Fe | Iglesia cristiana en Cali',
+  title: 'Nación de Fe Cali | MENTES LIBRES DE gigantes',
   description:
-    'Nación de Fe es una iglesia cristiana en Cali donde encontrarás fe, esperanza, comunidad y un lugar para crecer.',
+    'Nación de Fe Cali es una iglesia de influencia en Cali. Establecemos Diseño, Paternidad, Reino y Gobierno. Mentes libres de gigantes.',
+  keywords: ['Nación de Fe Cali', 'iglesia cristiana Cali', 'iglesia en Cali', 'Mentes libres de gigantes', 'Ciudad 2000'],
 };
 
 export default function RootLayout({

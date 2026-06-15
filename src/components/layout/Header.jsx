@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
@@ -18,8 +19,11 @@ export default function Header() {
     <header className='site-header'>
       <Container className='site-header__inner'>
         <Link href='/' className='site-header__brand' onClick={handleCloseMenu}>
-          <span className='site-header__brand-name'>{site.name}</span>
-          <span className='site-header__brand-copy'>Fe, esperanza y comunidad</span>
+          <Image src='/images/logo.png' alt='Logo Nación de Fe Cali' width={44} height={44} className='site-header__logo' priority />
+          <span className='site-header__brand-text'>
+            <span className='site-header__brand-name'>{site.name}</span>
+            <span className='site-header__brand-copy'>{site.sloganUpper}</span>
+          </span>
         </Link>
 
         <nav className='site-header__nav' aria-label='Navegación principal'>
@@ -31,8 +35,8 @@ export default function Header() {
         </nav>
 
         <div className='site-header__cta'>
-          <Button href='#horarios' variant='secondary'>
-            Ver horarios
+          <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`} variant='secondary' icon='whatsapp'>
+            WhatsApp
           </Button>
         </div>
 
@@ -54,20 +58,15 @@ export default function Header() {
         <Container className='site-header__mobile-menu-inner'>
           <nav className='site-header__mobile-nav' aria-label='Navegación móvil'>
             {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className='site-header__mobile-link'
-                onClick={handleCloseMenu}
-              >
+              <a key={item.href} href={item.href} className='site-header__mobile-link' onClick={handleCloseMenu}>
                 {item.label}
               </a>
             ))}
           </nav>
 
           <div className='site-header__mobile-actions'>
-            <Button href='#horarios' fullWidth onClick={handleCloseMenu}>
-              Ver horarios
+            <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`} fullWidth onClick={handleCloseMenu} icon='whatsapp'>
+              Escríbenos por WhatsApp
             </Button>
           </div>
         </Container>

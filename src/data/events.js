@@ -1,16 +1,16 @@
 // src/data/events.js
 const events = [
     {
-        title: 'Encuentro de oración',
-        description: 'Un tiempo para buscar a Dios juntos y fortalecer la fe.',
+        title: 'Noche de entrenamiento para empresarios y emprendedores',
+        description: 'Cada miércoles a las 7:00 p. m. nos reunimos para fortalecer empresarios y emprendedores desde principios del Reino.',
     },
     {
-        title: 'Reunión de jóvenes',
-        description: 'Un espacio para conectar, aprender y crecer en comunidad.',
+        title: 'Escuela de formación: identidad, propósito y destino',
+        description: 'Cada domingo a las 8:30 a. m. tenemos un espacio de formación para crecer en identidad, propósito y destino.',
     },
     {
-        title: 'Domingo especial',
-        description: 'Una reunión para compartir, adorar y recibir una palabra de esperanza.',
+        title: 'Celebración al Rey',
+        description: 'Cada domingo a las 10:00 a. m. celebramos juntos, recibimos palabra y fortalecemos nuestra identidad como casa.',
     },
 ];
 

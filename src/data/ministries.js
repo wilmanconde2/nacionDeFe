@@ -1,28 +1,20 @@
 // src/data/ministries.js
 const ministries = [
     {
-        title: 'Niños',
-        description: 'Un espacio seguro y alegre para aprender de Dios.',
+        title: 'Diseño',
+        description: 'Volvemos al diseño original del Padre para vivir con identidad, propósito y dirección.',
     },
     {
-        title: 'Jóvenes',
-        description: 'Fe, identidad y propósito para una nueva generación.',
+        title: 'Paternidad',
+        description: 'Trabajamos por restaurar corazones y volver el corazón de los padres a los hijos y de los hijos a los padres.',
     },
     {
-        title: 'Mujeres',
-        description: 'Encuentros para crecer, apoyar y fortalecer la vida espiritual.',
+        title: 'Reino',
+        description: 'Modelamos la simpleza del evangelio del Reino para manifestar el cielo en la tierra.',
     },
     {
-        title: 'Hombres',
-        description: 'Formación, carácter y comunidad.',
-    },
-    {
-        title: 'Familias',
-        description: 'Herramientas y acompañamiento para relaciones sanas y firmes.',
-    },
-    {
-        title: 'Servicio',
-        description: 'Oportunidades para servir con amor y propósito.',
+        title: 'Gobierno',
+        description: 'Formamos hijos posicionados en gobierno para influenciar familias, generaciones y naciones.',
     },
 ];
 

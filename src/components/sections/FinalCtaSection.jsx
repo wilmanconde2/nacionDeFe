@@ -1,6 +1,7 @@
 // src/components/sections/FinalCtaSection.jsx
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import site from '@/data/site';
 
 export default function FinalCtaSection() {
   return (
@@ -8,20 +9,19 @@ export default function FinalCtaSection() {
       <Container className='final-cta-section__inner'>
         <span className='final-cta-section__eyebrow'>Te esperamos</span>
 
-        <h2>Tu próximo paso puede comenzar hoy</h2>
+        <h2>Visítanos o escríbenos</h2>
 
         <p>
-          Si estás buscando una iglesia cristiana, un lugar para tu familia o una comunidad donde
-          crecer en fe, Nación de Fe puede ser ese lugar.
+          Acompáñanos en nuestras celebraciones o comunícate con nosotros para recibir más información.
         </p>
 
         <div className='final-cta-section__actions'>
           <Button href='#horarios' icon='calendar'>
-            Visítanos este domingo
+            Ver celebraciones
           </Button>
 
-          <Button href='/contacto' variant='secondary' icon='users'>
-            Hablar con alguien
+          <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`} variant='secondary' icon='whatsapp'>
+            Hablar con nosotros
           </Button>
         </div>
       </Container>

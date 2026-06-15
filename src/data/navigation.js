@@ -2,11 +2,10 @@
 const navigation = [
     { label: 'Inicio', href: '#inicio' },
     { label: 'Nosotros', href: '#nosotros' },
+    { label: 'Misión', href: '#mision' },
     { label: 'Horarios', href: '#horarios' },
-    { label: 'Ministerios', href: '#ministerios' },
-    { label: 'Eventos', href: '#eventos' },
+    { label: 'ADN', href: '#ministerios' },
     { label: 'Ubicación', href: '#ubicacion' },
-    { label: 'FAQ', href: '#faq' },
 ];
 
 export default navigation;

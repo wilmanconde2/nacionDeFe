@@ -10,6 +10,15 @@ const iconMap = {
   users: Users,
 };
 
+function isExternalHref(href = '') {
+  return (
+    href.startsWith('http://') ||
+    href.startsWith('https://') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:')
+  );
+}
+
 export default function Button({
   children,
   href = '#',
@@ -20,13 +29,9 @@ export default function Button({
   onClick,
 }) {
   const Icon = icon ? iconMap[icon] : null;
-
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={`button button--${variant} ${fullWidth ? 'button--full' : ''}`.trim()}
-    >
+  const className = `button button--${variant} ${fullWidth ? 'button--full' : ''}`.trim();
+  const content = (
+    <>
       {Icon && iconPosition === 'left' && (
         <span className='button__icon button__icon--left' aria-hidden='true'>
           <Icon />
@@ -40,6 +45,27 @@ export default function Button({
           <Icon />
         </span>
       )}
+    </>
+  );
+
+  if (isExternalHref(href)) {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        className={className}
+        target='_blank'
+        rel='noopener noreferrer nofollow'
+        referrerPolicy='no-referrer'
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} onClick={onClick} className={className}>
+      {content}
     </Link>
   );
 }

@@ -3,17 +3,18 @@ import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import ministries from '@/data/ministries';
+import site from '@/data/site';
 
 export default function MinistriesSection() {
   return (
-    <section className='ministries-section' id='ministerios' aria-label='Ministerios'>
+    <section className='ministries-section' id='ministerios' aria-label='ADN de la casa'>
       <div className='ministries-section__background' aria-hidden='true' />
 
       <Container className='ministries-section__inner'>
         <SectionHeading
-          eyebrow='Ministerios'
-          title='Hay un lugar para ti y tu familia'
-          description='Queremos que cada persona encuentre un espacio donde crecer, servir y conectar con otros.'
+          eyebrow='ADN de nuestra casa'
+          title='Diseño, Paternidad, Reino y Gobierno'
+          description='Estos son los fundamentos que establecemos como Nación de Fe Cali.'
         />
 
         <div className='card-grid'>
@@ -26,8 +27,8 @@ export default function MinistriesSection() {
         </div>
 
         <div className='section-actions'>
-          <Button href='/ministerios' variant='secondary' icon='users'>
-            Conoce nuestra comunidad
+          <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`} variant='secondary' icon='whatsapp'>
+            Conoce nuestra casa
           </Button>
         </div>
       </Container>

@@ -2,6 +2,7 @@
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
+import ExternalLink from '@/components/ui/ExternalLink';
 import site from '@/data/site';
 
 export default function LocationSection() {
@@ -11,23 +12,29 @@ export default function LocationSection() {
 
       <Container className='location-section__inner'>
         <SectionHeading
-          eyebrow='Ubicación'
-          title='Encuéntranos fácilmente'
-          description='Queremos que tu primera visita sea sencilla. Revisa nuestra ubicación y contáctanos si necesitas ayuda.'
+          eyebrow='Ubicación y contacto'
+          title='Encuéntranos en Ciudad 2000'
+          description='Te esperamos en nuestras celebraciones. También puedes comunicarte por WhatsApp, teléfono, correo o redes sociales.'
         />
 
         <div className='location-box'>
           <div>
-            <h3>{site.city}</h3>
+            <h3>{site.name}</h3>
             <p>{site.address}</p>
+            <p>{site.city}</p>
+            <p>Teléfono: {site.phone}</p>
+            <p>WhatsApp: {site.whatsappDisplay}</p>
+            <p>Correo: <ExternalLink href={`mailto:${site.email}`}>{site.email}</ExternalLink></p>
+            <p>Instagram: <ExternalLink href={site.instagramUrl}>{site.instagram}</ExternalLink></p>
+            <p>Facebook: <ExternalLink href={site.facebookUrl}>{site.facebook}</ExternalLink></p>
           </div>
 
           <div className='location-box__actions'>
-            <Button href='#contacto' icon='whatsapp'>
-              Escríbenos por WhatsApp
+            <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}`} icon='whatsapp'>
+              WhatsApp
             </Button>
 
-            <Button href='#' variant='secondary' icon='location'>
+            <Button href={site.mapsUrl} variant='secondary' icon='location'>
               Cómo llegar
             </Button>
           </div>

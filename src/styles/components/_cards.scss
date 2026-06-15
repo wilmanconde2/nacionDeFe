@@ -1,4 +1,3 @@
-// src/styles/components/_cards.scss
 .card,
 .info-card,
 .faq-item,
@@ -29,7 +28,8 @@
 }
 
 .location-box {
-    padding: 1.5rem;
+    padding: 2rem;
+    color: #111111;
 }
 
 .location-box__actions {
@@ -39,8 +39,49 @@
     margin-top: 1.25rem;
 }
 
-@media (min-width: 768px) {
+.location-box a:not(.button) {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
 
+.location-box a:not(.button):hover {
+    color: #d7bb83;
+}
+
+.location-box p {
+    color: #222222;
+}
+
+.location-box h3 {
+    color: #111111;
+}
+
+.verse-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.verse-card {
+    padding: 1.5rem;
+    background: rgba(199, 168, 107, 0.08);
+    border: 1px solid rgba(199, 168, 107, 0.26);
+    border-radius: var(--radius-md);
+}
+
+.verse-card p {
+    margin-bottom: 0.8rem;
+    color: var(--color-heading);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.verse-card strong {
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
     .card,
     .info-card,
     .faq-item,
@@ -58,5 +99,92 @@
     .location-box__actions {
         flex-direction: row;
         margin-top: 0;
+    }
+
+    .verse-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.pastors-feature {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background:
+        radial-gradient(circle at top right, rgba(199, 168, 107, 0.14), transparent 32%),
+        #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.pastors-feature__content {
+    max-width: 620px;
+}
+
+.pastors-feature__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pastors-feature__content h3 {
+    margin-bottom: 0.75rem;
+}
+
+.pastors-feature__grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.pastor-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.pastor-card__image {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.pastor-card__body {
+    padding: 1rem;
+}
+
+.pastor-card__body h4 {
+    margin-bottom: 0.25rem;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+
+.pastor-card__body p {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+@media (min-width: 768px) {
+    .pastors-feature {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        align-items: center;
+        padding: 1.75rem;
+    }
+
+    .pastors-feature__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pastor-card__image {
+        height: 420px;
     }
 }
